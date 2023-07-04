@@ -1,0 +1,151 @@
+.advant {
+  overflow: hidden;
+
+  &__title {
+    padding: 0 40px;
+    padding-top: 120px;
+
+    @include width-1440 {
+      padding: 0 32px;
+      padding-top: 100px;
+    }
+
+    @include width-1280 {
+      padding: 0 24px;
+      padding-top: 80px;
+    }
+
+    @include width-1024 {
+      padding: 0 40px;
+      padding-top: 40px;
+    }
+
+    @include width-768 {
+      padding: 0 28px;
+      padding-top: 60px;
+    }
+  }
+
+  &__cards {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: -1px;
+    margin-right: -1px;
+
+    @include width-1440 {
+      margin-top: 50px;
+    }
+
+    @include width-1280 {
+      margin-top: 40px;
+    }
+
+    @include width-1024 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include width-768 {
+      margin-top: 24px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    padding: 40px;
+
+    @include width-1440 {
+      padding: 32px;
+    }
+
+    @include width-1280 {
+      padding: 24px;
+    }
+
+    @include width-1024 {
+      padding: 40px;
+    }
+
+    @include width-768 {
+      padding: 28px;
+    }
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+    
+    @include width-1700 {
+      width: 80px;
+      height: 80px;
+    }
+
+    @include width-1280 {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include width-768 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__text {
+    margin-top: 32px;
+
+    @include width-1440 {
+      margin-top: 20px;
+    }
+
+    @include width-1280 {
+      margin-top: 16px;
+    }
+  }
+
+  &__card-empty {
+    position: relative;
+    overflow: hidden;
+
+    @include width-768 {
+      display: none;
+    }
+  }
+}
+
+.advant-conc {
+  background: #0E0D0D;
+
+  & .advant__card {
+    border: 1px solid #252424;
+    &:nth-child(-n+3) {
+      border-top: 2px solid #252424;
+    }
+  }
+
+  & .advant__title {
+    color: #fff;
+  }
+
+  & .advant__name {
+    color: #fff;
+  }
+
+  & .advant__desc {
+    color: #fff;
+  }
+}
+
+.advant-exp {
+
+  & .advant__card {
+    border: 1px solid #DDDDDD;
+    &:nth-child(-n+3) {
+      border-top: 2px solid #DDDDDD;
+    }
+  }
+
+  & .advant__title {
+    text-align: right;
+  }
+}

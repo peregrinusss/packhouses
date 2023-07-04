@@ -1,0 +1,135 @@
+.forb {
+  margin: 120px 0;
+  padding: 0 40px;
+
+  @include width-1440 {
+    margin: 100px 0;
+    padding: 0 32px;
+  }
+
+  @include width-1280 {
+    margin: 80px 0;
+    padding: 0 24px;
+  }
+
+  @include width-1024 {
+    padding: 0 40px;
+  }
+
+  @include width-768 {
+    margin: 60px 0;
+    padding: 0 28px;
+  }
+
+  &__screen {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    @include width-1024 {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    color: #0E0D0D;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 114%;
+    letter-spacing: -1.32px;
+    text-transform: uppercase;
+
+    @include width-1700 {
+      font-size: 32px;
+    }
+
+    @include width-1280 {
+      font-size: 28px;
+    }
+
+    @include width-768 {
+      font-size: 30px;
+    }
+
+    & span {
+      font-weight: 600;
+    };
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 60px;
+
+    @include width-1440 {
+      column-gap: 28px;
+    }
+
+    @include width-1280 {
+      row-gap: 40px;
+      column-gap: 14px;
+    }
+
+    @include width-768 {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    max-width: 560px;
+
+    @include width-1700 {
+      max-width: 400px;
+    }
+
+    @include width-1280 {
+      max-width: 328px;
+    }
+
+    @include width-768 {
+      max-width: 100%;
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+
+    @include width-1280 {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__name {
+    color: #0E0D0D;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.72px;
+    margin-left: 32px;
+
+    @include width-1700 {
+      font-size: 20px;
+      margin-left: 24px;
+    }
+
+    @include width-1440 {
+      margin-left: 16px;
+    }
+
+    @include width-1280 {
+      font-size: 16px;
+      margin-left: 8px;
+    }
+
+    @include width-768 {
+      font-size: 14px;
+      margin-left: 16px;
+    }
+  }
+}

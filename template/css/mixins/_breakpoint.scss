@@ -1,0 +1,43 @@
+/* stylelint-disable */
+
+@mixin width-1850 {
+  @media (max-width: (1849px)) {
+    @content;
+  }
+}
+
+@mixin width-1700 {
+  @media (max-width: (1700px)) {
+    @content;
+  }
+}
+
+@mixin width-1440 {
+  @media (max-width: (1439px)) {
+    @content;
+  }
+}
+
+@mixin width-1280 {
+  @media (max-width: (1279px)) {
+    @content;
+  }
+}
+
+@mixin width-1024 {
+  @media (max-width: (1023px)) {
+    @content;
+  }
+}
+
+@mixin width-768 {
+  @media (max-width: (767px)) {
+    @content;
+  }
+}
+
+@mixin width-375 {
+  @media (max-width: (374px)) {
+    @content;
+  }
+}

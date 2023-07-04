@@ -1,0 +1,94 @@
+@import "./mixins/breakpoint";
+@import "graph-tabs.min.css";
+
+.title {
+
+  &-h2 {
+    color: #0E0D0D;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -1.8px;
+    text-transform: uppercase;
+  
+    @include width-1700 {
+      font-size: 44px;
+    }
+  
+    @include width-1024 {
+      font-size: 36px;
+    }
+  
+    @include width-768 {
+      font-size: 30px;
+    }
+  }
+
+  &-h3 {
+    color: #0E0D0D;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 175%;
+    letter-spacing: -0.96px;
+    
+    @include width-1700 {
+      font-size: 26px;
+    }
+
+    @include width-1280 {
+      font-size: 24px;
+    }
+
+    @include width-768 {
+      font-size: 20px;
+    }
+  }
+
+  &-desc {
+    display: block;
+    color: #0E0D0D;
+    font-size: 20px;
+    line-height: 150%;
+
+    @include width-1700 {
+      font-size: 16px;
+    }
+
+    @include width-768 {
+      font-size: 14px;
+    }
+  }
+}
+
+.noscroll {
+  overflow: hidden
+}
+
+.js-sb-content-box {
+  overflow-y: auto
+}
+
+
+@import "components/slider";
+@import "components/intro";
+@import "components/advant";
+@import "components/forb";
+@import "components/request";
+@import "components/docs";
+@import "components/spec";
+@import "components/scheme";
+@import "components/feedback";
+
+
+.footer-button {
+  margin-top: 32px;
+}
+
+.footer-schedule {
+  margin-bottom: 14px;
+  color: #9B9B9B;
+
+  &--text {
+    color: #fff;
+  }
+}

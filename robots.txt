@@ -1,0 +1,11 @@
+User-agent: *
+Host: packhouses.strelkapark.ru
+Sitemap: https://packhouses.strelkapark.ru/sitemap.xml
+
+
+Disallow: /cgi-bin
+Disallow: /manager/
+Disallow: /assets/components/
+Disallow: /core/
+Disallow: /connectors/
+Disallow: /index.php

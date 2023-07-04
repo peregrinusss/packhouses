@@ -1,0 +1,238 @@
+.docs {
+  padding-top: 120px;
+
+  @include width-1440 {
+    padding-top: 100px;
+  }
+
+  @include width-1280 {
+    padding-top: 80px;
+  }
+
+  @include width-1024 {
+    padding-top: 40px;
+  }
+
+  @include width-768 {
+    padding-top: 60px;
+  }
+
+  &__items {
+    margin-top: 60px;
+
+    @include width-1440 {
+      margin-top: 50px;
+    }
+
+    @include width-1280 {
+      margin-top: 40px;
+    }
+
+    @include width-768 {
+      margin-top: 24px;
+    }
+
+    & ol {
+      list-style: none;
+
+      counter-reset: item;
+
+      & li {
+
+        &::before {
+          counter-increment: item;
+          content: counter(item);
+          color: #9B9B9B;
+          font-size: 28px;
+          font-weight: 500;
+          line-height: 130%;
+          letter-spacing: -0.84px;
+          margin-right: 24px;
+
+          @include width-1700 {
+            font-size: 22px;
+          }
+
+          @include width-1280 {
+            font-size: 16px;
+          }
+
+          @include width-768 {
+            grid-column: 1;
+            grid-row: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    border-top: 2px solid #DDD;
+    padding: 32px 40px;
+    transition: all .3s;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: auto 900px auto auto;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      border-bottom: 2px solid #DDD;
+    }
+
+    &:hover {
+      background: rgba(221, 221, 221, 0.20);
+    }
+
+    &-3 {
+      & .docs__app {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    @include width-1700 {
+      padding: 28px 40px;
+    }
+
+    @include width-1440 {
+      padding: 24px 32px;
+      grid-template-columns: auto 700px auto auto;
+    }
+  
+    @include width-1280 {
+      padding: 20px 24px;
+      grid-template-columns: auto 600px auto auto;
+    }
+  
+    @include width-1024 {
+      padding: 20px 40px;
+      grid-template-columns: auto 400px auto auto;
+      gap: 20px;
+    }
+  
+    @include width-768 {
+      padding: 14px 28px;
+      grid-template-columns: auto auto;
+      grid-template-rows: repeat(3,auto);
+      gap: 0;
+      column-gap: 10px;
+    }
+  }
+
+  &__app {
+    color: #9B9B9B;
+    text-align: center;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: -0.66px;
+
+    @include width-1700 {
+      font-size: 20px;
+    }
+
+    @include width-1280 {
+      font-size: 18px;
+    }
+
+    @include width-768 {
+      font-size: 16px;
+      grid-column: 2;
+      grid-row: 2;
+    }
+  }
+
+  &__name {
+    display: block;
+    color: #0E0D0D;
+    margin-bottom: 0;
+    margin-left: -100px;
+
+    @include width-1700 {
+      margin-left: 0;
+    }
+
+    @include width-768 {
+      grid-column: 1;
+      grid-row: 2;
+      margin-top: 4px;
+    }
+  }
+
+  &__title {
+
+    padding: 0 40px;
+
+    @include width-1440 {
+      padding: 0 32px;
+    }
+  
+    @include width-1280 {
+      padding: 0 24px;
+    }
+  
+    @include width-1024 {
+      padding: 0 40px;
+    }
+  
+    @include width-768 {
+      padding: 0 28px;
+    }
+  }
+
+  &__download {
+    width: fit-content;
+    border-radius: 60px;
+    background: #555;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 125%;
+    padding: 14px 30px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    @include width-1024 {
+      padding: 10px 24px;
+    }
+
+    @include width-768 {
+      font-size: 14px;
+      grid-column: 1;
+      grid-row: 3;
+      margin-top: 14px;
+    }
+  }
+
+  &__more {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 60px;
+    border: 1px solid #0E0D0D;
+    padding: 14px 30px;
+    color: #0E0D0D;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 125%;
+    transition: all .3s;
+
+    &:hover {
+      background: #0E0D0D;
+      color: #fff;
+    }
+
+    @include width-1024 {
+      padding: 10px 24px;
+    }
+
+    @include width-768 {
+      font-size: 14px;
+    }
+  }
+}
+

@@ -1,0 +1,486 @@
+.scheme {
+  padding-top: 120px;
+  overflow: hidden;
+
+  @include width-1440 {
+    padding-top: 100px;
+  }
+
+  @include width-1280 {
+    padding-top: 80px;
+  }
+
+  @include width-1024 {
+    padding-top: 40px;
+  }
+
+  @include width-768 {
+    padding-top: 60px;
+  }
+
+  &__title {
+    padding: 0 40px;
+
+    @include width-1440 {
+      padding: 0 32px;
+    }
+
+    @include width-1280 {
+      padding: 0 24px;
+    }
+
+    @include width-1024 {
+      padding: 0 40px;
+    }
+
+    @include width-768 {
+      padding: 0 28px;
+    }
+  }
+  
+  & .btn {
+
+    @include width-1700 {
+      font-size: 18px;
+    }
+
+    @include width-1280 {
+      font-size: 16px;
+    }
+
+    @include width-768 {
+      font-size: 14px;
+    }
+
+    &-white {
+      background: #fff;
+      color: #0E0D0D;
+      border: 1px solid #DDD;
+    }
+  }
+
+  & .tabs__nav {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0 40px;
+    margin-top: 30px;
+
+    @include width-1440 {
+      padding: 0 32px;
+    }
+
+    @include width-1280 {
+      padding: 0 24px;
+    }
+
+    @include width-1024 {
+      padding: 0 40px;
+    }
+
+    @include width-768 {
+      padding: 0 28px;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
+  &__content {
+    border-top: 2px solid #DDDDDD;
+    border-bottom: 2px solid #DDDDDD;
+    margin-top: 30px;
+
+    @include width-1440 {
+      margin-top: 26px;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: self-start;
+    overflow: hidden;
+
+    @include width-1024 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__wrap {
+
+    @include width-768 {
+      overflow-y: auto;
+      margin-top: 20px;
+
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+    width: 100%;
+
+    @include width-768 {
+      width: 688px;
+      height: 377px;
+      margin: 0 20px;
+    }
+  }
+
+  &__padd {
+    padding: 40px 40px 0;
+
+    @include width-1440 {
+      padding: 32px 32px 0;
+    }
+
+    @include width-1280 {
+      padding: 24px 24px 0;
+    }
+
+    @include width-1024 {
+      padding: 40px 40px 0;
+    }
+
+    @include width-768 {
+      padding: 0;
+      padding-top: 10px;
+
+      &:last-child {
+        padding: 20px 28px 0;
+      }
+    }
+  }
+
+  &__img {
+    padding: 40px 40px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    @include width-1440 {
+      padding: 32px 32px 0;
+    }
+
+    @include width-1280 {
+      padding: 24px 24px 0;
+    }
+
+    @include width-1024 {
+      padding: 40px 40px 0;
+    }
+
+    @include width-768 {
+      padding: 0;
+    }
+  }
+
+  &__svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    @include width-768 {
+      position: absolute;
+    }
+    
+    & path {
+      display: block;
+      position: relative;
+      fill: transparent;
+      cursor: pointer;
+      z-index: 3;
+      transition: all 0.3s;
+
+      &:hover {
+        fill-opacity: 0.2;
+        stroke-width: 2;
+        stroke: #0E0D0D;
+        fill: #DDDDDD33;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &__pane {
+
+    @include width-1024 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 24px;
+      min-width: 0;
+
+      & .intro-pack__title {
+        grid-column: span 2;
+      }
+    }
+
+    @include width-768 {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+    }
+  }
+
+  &__text {
+    max-height: 268px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 14px;
+
+    @include width-1440 {
+      margin-bottom: 16px;
+    }
+
+    @include width-1024 {
+      margin-bottom: 10px;
+      grid-row: 2;
+      max-height: 300px;
+    }
+
+    @include width-768 {
+      grid-row: 3;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;               /* ширина всей полосы прокрутки */
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #DDDDDD;        /* цвет зоны отслеживания */
+      border-radius: 20px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: #9B9B9B;    /* цвет бегунка */
+      border-radius: 20px;       /* округлось бегунка */
+    }
+  }
+
+  &__stat {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 420px;
+
+    & span {
+      color: #0E0D0D;
+      font-size: 20px;
+      font-style: normal;
+      line-height: 150%;
+
+      &:first-child {
+        font-weight: 400;
+      }
+  
+      &:last-child {
+        font-weight: 700;
+      }
+    }
+
+    @include width-1700 {
+      font-size: 16px;
+    }
+
+    @include width-1280 {
+      flex-direction: column;
+      gap: 0;
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__desc {
+    color:  #0E0D0D;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+    margin-top: 20px;
+
+    @include width-1700 {
+      font-size: 16px;
+    }
+
+    @include width-1440 {
+      margin-top: 16px;
+    }
+
+    & p {
+
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+.tabs {
+
+  &__nav {
+  }
+
+  &__nav-item {
+  }
+
+  &__nav-btn {
+    background: #fff;
+    color: #0E0D0D;
+    border: 1px solid #DDD;
+    transition: all 0.4s;
+
+    &:focus {
+      background: #0E0D0D !important;
+      color: #fff !important;
+    }
+
+    &--active {
+      background: #0E0D0D !important;
+      color: #fff !important;
+    }
+  }
+
+  &__content {
+  }
+
+  &__panel {
+  }
+}
+
+.scheme-swiper {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  height: fit-content;
+
+  @include width-1440 {
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+
+  @include width-1024 {
+    margin-bottom: 10px;
+    grid-row: 2;
+    margin-top: 0;
+  }
+  &__nav {
+    width: fit-content;
+    position: absolute;
+    bottom: 20px; 
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 3;
+    display: flex;
+    gap: 35px;
+
+    @include width-1700 {
+      gap: 24px;
+    }
+
+    @include width-1024 {
+      width: auto;
+      justify-content: space-between;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      margin: 0;
+    }
+  }
+
+  & .swiper-button-next {
+    position: static;
+    background: url("/template/img/organizers/Icon/arrow_right_white.svg") no-repeat center;
+    width: 42px;
+    height: 22px;
+    background-size: contain;
+
+    @include width-1700 {
+      width: 34px;
+      height: 18px;
+    }
+  }
+
+  & .swiper-button-prev {
+    position: static;
+    background: url("/template/img/organizers/Icon/arrow_right_white.svg") no-repeat center;
+    width: 42px;
+    height: 22px;
+    background-size: contain;
+    transform: rotate(180deg);
+
+    @include width-1700 {
+      width: 34px;
+      height: 18px;
+    }
+  }
+
+  &__slide {
+    height: 485px;
+
+    @include width-1700 {
+      height: 350px;
+    }
+
+    @include width-1440 {
+      height: 312px;
+    }
+
+    @include width-1280 {
+      height: 252px;
+    }
+
+    @include width-768 {
+      height: 66vw;
+      min-height: 244px;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.tabs__btn_active {
+  fill-opacity: 0.2;
+  stroke-width: 2;
+  stroke: #0E0D0D;
+  fill: #DDDDDD33;
+  transition: all 0.3s;
+}
+
+.tabs__btn:not(.tabs__btn_active):hover,
+.tabs__btn:not(.tabs__btn_active):focus {
+  fill-opacity: 0.2;
+  stroke-width: 2;
+  stroke: #0E0D0D;
+  fill: #DDDDDD33;
+  transition: all 0.3s;
+}
+
+.tabs__pane {
+  display: none;
+}
+
+.tabs__pane_show {
+  display: block;
+}
+
