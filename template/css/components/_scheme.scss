@@ -109,7 +109,7 @@
   &__wrap {
 
     @include width-768 {
-      overflow-y: auto;
+      overflow-y: scroll;
       margin-top: 20px;
 
       -ms-overflow-style: none;  /* IE and Edge */
@@ -235,7 +235,7 @@
 
   &__text {
     max-height: 268px;
-    overflow-y: auto;
+    overflow-y: scroll;
     margin-bottom: 20px;
     padding-right: 14px;
 

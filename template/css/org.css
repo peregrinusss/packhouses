@@ -1873,7 +1873,7 @@
 }
 @media (max-width: 767px) {
   .scheme__wrap {
-    overflow-y: auto;
+    overflow-y: scroll;
     margin-top: 20px;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -2007,7 +2007,7 @@
 }
 .scheme__text {
   max-height: 268px;
-  overflow-y: auto;
+  overflow-y: scroll;
   margin-bottom: 20px;
   padding-right: 14px;
 }
@@ -2954,6 +2954,7 @@ label {
 
 label.error {
   position: absolute;
+  width: 300px;
   bottom: -30px;
   color: var(--red, #ff433a);
   font-size: 20px;
@@ -3043,7 +3044,7 @@ label.error {
   }
 }
 .sidebar-text-feedback .feedback__form {
-  overflow-y: auto;
+  overflow-y: scroll;
   max-height: calc(100vh - 50px - 142px - 80px);
   padding-right: 20px;
 }

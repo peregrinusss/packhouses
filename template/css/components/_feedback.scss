@@ -585,6 +585,7 @@ label {
 
 label.error {
   position: absolute;
+  width: 300px;
   bottom: -30px;
   color: var(--red, #ff433a);
   font-size: 20px;
@@ -665,7 +666,7 @@ label.error {
   }
 
   & .feedback__form {
-    overflow-y: auto;
+    overflow-y: scroll;
     max-height: calc(100vh - 50px - 142px - 80px);
     padding-right: 20px;
 
