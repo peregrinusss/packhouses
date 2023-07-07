@@ -201,15 +201,35 @@ $(document).ready(function () {
 		}
 	})
 
-	$.validator.addClassRules("input-group", {
-		require_from_group: [1, ".input-group"]
+
+	const inputFileWraps = document.querySelectorAll('.feedback__file')
+
+	inputFileWraps.forEach((inputFileWrap) => {
+		const inputHidden = inputFileWrap.querySelector('.feedback__input-fileval')
+		const inputFile = inputFileWrap.querySelector('.input__file')
+
+		inputFile.addEventListener('change', () => {
+
+			if (inputFile.files.length != 0) {
+				inputHidden.value = inputFile.files[0].name
+			} else {
+				inputHidden.value = null
+			}
+		})
+	})
+
+
+	$(document).on("change", ".input__file-1", function (e) {
+		if (this.files.length != 0) {
+			$('[name="file_input"], [name="feedback_prog"]').valid();
+		}
 	});
 
-
-	// Добавляем метод проверки, который будет возвращать true, если хотя бы одно из полей заполнено
-	$.validator.addMethod('oneFieldRequired', function(value, element) {
-		return $('#feedback_prog').val() !== '' || $('#feedback_file').val() !== '';
-	}, '! Заполните одно из полей');
+	$(document).on("change", ".input__file-2", function (e) {
+		if (this.files.length != 0) {
+			$('[name="file_input_1"], [name="feedback_prog_1"]').valid();
+		}
+	});
 
 
 	$("#feedback_form").validate({
@@ -227,12 +247,12 @@ $(document).ready(function () {
 			feedback_tel: "required",
 			feedback_title: "required",
 			feedback_agree: "required",
-			// feedback_prog: {
-			// 	require_from_group: [1, '.input-group'],
-			// },
-			// feedback_file: {
-			// 	require_from_group: [1, '.input-group'],
-			// },
+			feedback_prog: {
+				require_from_group: [1, '.input-group'],
+			},
+			file_input: {
+				require_from_group: [1, '.input-group'],
+			},
       
       // compound rule
       email: {
@@ -248,13 +268,13 @@ $(document).ready(function () {
 			feedback_comp: "! Вы не заполнили это поле",
 			feedback_tel: "! Вы не заполнили это поле",
 			feedback_title: "! Вы не заполнили это поле",
-			// feedback_prog: {
-			// 	require_from_group: "! Заполните одно из полей"
-			// },
+			feedback_prog: {
+				require_from_group: "! Заполните одно из полей"
+			},
 			feedback_agree: "! Вы не заполнили это поле",
-			// feedback_file: {
-			// 	require_from_group: "! Заполните одно из полей"
-			// },
+			file_input: {
+				require_from_group: "! Заполните одно из полей"
+			},
 			feedback_email: {
 				required: "! Вы не заполнили это поле",
 				email: "! Введите корректный адрес"
@@ -280,10 +300,10 @@ $(document).ready(function () {
 			feedback_title_1: "required",
 			feedback_agree_1: "required",
 			feedback_prog_1: {
-				oneFieldRequired: true
+				require_from_group: [1, '.input-group-1'],
 			},
-			feedback_file_1: {
-				oneFieldRequired: true
+			file_input_1: {
+				require_from_group: [1, '.input-group-1'],
 			},
       
       // compound rule
@@ -300,9 +320,13 @@ $(document).ready(function () {
 			feedback_comp_1: "! Вы не заполнили это поле",
 			feedback_tel_1: "! Вы не заполнили это поле",
 			feedback_title_1: "! Вы не заполнили это поле",
-			// feedback_prog: "! Вы не заполнили это поле",
+			feedback_prog_1: {
+				require_from_group: "! Заполните одно из полей"
+			},
 			feedback_agree_1: "! Вы не заполнили это поле",
-			// feedback_file: "! Вы не заполнили это поле",
+			file_input_1: {
+				require_from_group: "! Заполните одно из полей"
+			},
 			feedback_email_1: {
 				required: "! Вы не заполнили это поле",
 				email: "! Введите корректный адрес"

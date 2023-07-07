@@ -1792,18 +1792,19 @@
                   </div>
                   <div class="feedback__mtop">
                     <span class="feedback__name title-desc">Программа и тайминг ✷</span>
-                    <div class="feedback__grid feedback__grid-4">
+                    <div class="feedback__grid feedback__grid-4 feedback__file">
                       <div class="feedback__input">
                         <label for="feedback_prog">
-                          <input type="text" id="feedback_prog" name="feedback_prog" placeholder="Напишите" class="input-group">
+                          <input type="text" id="feedback_prog" name="feedback_prog" placeholder="Напишите" class="input-group input__prog">
                         </label>
                       </div>
                       <span class="title-desc feedback__or">Или</span>
                       <div class="feedback__input">
-                       <input required="" name="feedback_file" type="file" id="feedback_file" class="input input__file input-group">
-                       <label for="feedback_file" class="input__file-button">
-                          <span class="input__file-button-text title-desc">Прикрепить файл</span>
-                       </label>
+                        <input type="text" name="file_input" class="feedback__input-fileval input-group">
+                        <input name="feedback_file" type="file" id="feedback_file" class="input input__file input__file-1">
+                        <label for="feedback_file" class="input__file-button">
+                            <span class="input__file-button-text title-desc">Прикрепить файл</span>
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -2065,18 +2066,20 @@
                         </div>
                         <div class="feedback__mtop">
                           <span class="feedback__name title-desc">Программа и тайминг ✷</span>
-                          <div class="feedback__grid feedback__grid-4">
+                          <div class="feedback__grid feedback__grid-4 feedback__file">
                             <div class="feedback__input">
                               <label for="feedback_prog_1">
-                                <input type="text" id="feedback_prog_1" name="feedback_prog_1" placeholder="Напишите">
+                                <input type="text" id="feedback_prog_1" class="input-group-1" name="feedback_prog_1" placeholder="Напишите">
                               </label>
                             </div>
                             <span class="title-desc feedback__or">Или</span>
                             <div class="feedback__input">
-                             <input required="" name="feedback_file_1" type="file" id="feedback_file_1" class="input input__file">
-                             <label for="feedback_file_1" class="input__file-button">
-                                <span class="input__file-button-text title-desc">Прикрепить файл</span>
-                             </label>
+                              <div class="feedback__input">
+                              <input type="text" name="file_input_1" class="feedback__input-fileval input-group-1">
+                              <input name="feedback_file_1" type="file" id="feedback_file_1" class="input input__file input__file-2">
+                              <label for="feedback_file_1" class="input__file-button">
+                                  <span class="input__file-button-text title-desc">Прикрепить файл</span>
+                              </label>
                             </div>
                           </div>
                         </div>
