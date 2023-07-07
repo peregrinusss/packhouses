@@ -901,11 +901,10 @@ label.error {
   position: absolute;
   width: 100%;
   background: #fff;
-  z-index: 2;
+  z-index: 102;
 }
 
 .js-sb-content-box {
   padding-top: 50px;
   position: relative;
-  z-index: 1;
 }
