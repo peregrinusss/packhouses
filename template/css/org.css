@@ -3264,6 +3264,15 @@ label.error {
   visibility: hidden;
 }
 
+.sidebar-top {
+  position: absolute;
+  width: 100%;
+}
+
+.js-sb-content-box {
+  padding-top: 50px;
+}
+
 .footer-button {
   margin-top: 32px;
 }
