@@ -667,7 +667,7 @@ label.error {
 
   & .feedback__form {
     overflow-y: scroll;
-    max-height: calc(100vh - 50px - 142px - 80px);
+    max-height: calc(100vh - 50px - 142px - 80px);;
     padding-right: 20px;
 
     @include width-1700 {
@@ -676,21 +676,21 @@ label.error {
 
     @include width-1440 {
       padding-right: 16px;
-      max-height: calc(100vh - 50px - 126px - 64px);
+      max-height: calc(100vh - 50px - 110px - 64px);
     }
 
     @include width-1280 {
       padding-right: 12px;
-      max-height: calc(100vh - 50px - 126px - 48px);
+      max-height: calc(100vh - 50px - 94px - 48px);
     }
 
     @include width-1024 {
-      max-height: calc(100vh - 50px - 118px - 48px);
+      max-height: calc(100vh - 50px - 86px - 48px);
     }
 
     @include width-768 {
       padding-right: 14px;
-      max-height: calc(100vh - 50px - 112px - 56px);
+      max-height: calc(100vh - 50px - 88px - 56px);
     }
 
     & .feedback__item {
@@ -699,20 +699,20 @@ label.error {
       }
     }
 
-    &::-webkit-scrollbar {
-      -webkit-appearance: none;
-      width: 4px; /* ширина всей полосы прокрутки */
-    }
+    // &::-webkit-scrollbar {
+    //   -webkit-appearance: none;
+    //   width: 4px; /* ширина всей полосы прокрутки */
+    // }
 
-    &::-webkit-scrollbar-track {
-      background: #dddddd; /* цвет зоны отслеживания */
-      border-radius: 20px;
-    }
+    // &::-webkit-scrollbar-track {
+    //   background: #dddddd; /* цвет зоны отслеживания */
+    //   border-radius: 20px;
+    // }
 
-    &::-webkit-scrollbar-thumb {
-      background-color: #9b9b9b; /* цвет бегунка */
-      border-radius: 20px; /* округлось бегунка */
-    }
+    // &::-webkit-scrollbar-thumb {
+    //   background-color: #9b9b9b; /* цвет бегунка */
+    //   border-radius: 20px; /* округлось бегунка */
+    // }
 
     & .feedback__grid-3 {
 
@@ -834,6 +834,10 @@ label.error {
       }
     }
   }
+}
+
+.sidebar {
+  height: 100vh;
 }
 
 .sidebar-content-feedback {
