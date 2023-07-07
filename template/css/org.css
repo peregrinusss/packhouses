@@ -3207,6 +3207,7 @@ label.error {
 .sidebar {
   height: 100vh;
   z-index: 100;
+  background: #fff;
 }
 
 .sidebar-content-feedback {
