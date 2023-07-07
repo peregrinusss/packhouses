@@ -691,6 +691,11 @@ label.error {
     @include width-768 {
       padding-right: 14px;
       max-height: calc(100vh - 50px - 88px - 56px);
+      overflow: visible;
+
+      & form {
+        padding-bottom: 28px;
+      }
     }
 
     & .feedback__item {
@@ -838,6 +843,7 @@ label.error {
 
 .sidebar {
   height: 100vh;
+  z-index: 100;
 }
 
 .sidebar-content-feedback {

@@ -3075,6 +3075,10 @@ label.error {
   .sidebar-text-feedback .feedback__form {
     padding-right: 14px;
     max-height: calc(100vh - 50px - 88px - 56px);
+    overflow: visible;
+  }
+  .sidebar-text-feedback .feedback__form form {
+    padding-bottom: 28px;
   }
 }
 .sidebar-text-feedback .feedback__form .feedback__item:first-child {
@@ -3202,6 +3206,7 @@ label.error {
 
 .sidebar {
   height: 100vh;
+  z-index: 100;
 }
 
 .sidebar-content-feedback {
