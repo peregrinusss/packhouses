@@ -700,6 +700,7 @@ label.error {
     }
 
     &::-webkit-scrollbar {
+      -webkit-appearance: none;
       width: 4px; /* ширина всей полосы прокрутки */
     }
 
