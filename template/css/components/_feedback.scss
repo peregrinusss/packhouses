@@ -694,7 +694,7 @@ label.error {
       overflow: visible;
 
       & form {
-        padding-bottom: 28px;
+        padding-bottom: 100px;
       }
     }
 
@@ -900,6 +900,7 @@ label.error {
 .sidebar-top {
   position: absolute;
   width: 100%;
+  background: #fff;
 }
 
 .js-sb-content-box {

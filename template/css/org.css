@@ -3078,7 +3078,7 @@ label.error {
     overflow: visible;
   }
   .sidebar-text-feedback .feedback__form form {
-    padding-bottom: 28px;
+    padding-bottom: 100px;
   }
 }
 .sidebar-text-feedback .feedback__form .feedback__item:first-child {
@@ -3268,6 +3268,7 @@ label.error {
 .sidebar-top {
   position: absolute;
   width: 100%;
+  background: #fff;
 }
 
 .js-sb-content-box {
