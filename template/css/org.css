@@ -1,6 +1,18 @@
 @charset "UTF-8";
 /* stylelint-disable */
 @import "graph-tabs.min.css";
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .title-h2 {
   color: #0E0D0D;
   font-size: 60px;
@@ -1985,6 +1997,12 @@
     display: grid;
     -ms-grid-columns: 1fr 16px 1fr;
     grid-template-columns: 1fr 1fr;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-column-gap: 16px;
        -moz-column-gap: 16px;
             column-gap: 16px;
@@ -1992,8 +2010,20 @@
     min-width: 0;
   }
   .scheme__pane .intro-pack__title {
-    -ms-grid-column-span: 2;
-    grid-column: span 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .scheme__pane .btn-tab-next {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .scheme__pane .scheme-swiper {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .scheme__pane .scheme__text {
+    -ms-grid-column: 2;
+    grid-column: 2;
   }
 }
 @media (max-width: 767px) {
@@ -2003,6 +2033,28 @@
     -webkit-column-gap: 0;
        -moz-column-gap: 0;
             column-gap: 0;
+  }
+  .scheme__pane .btn-tab-next {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .scheme__pane .intro-pack__title {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .scheme__pane .scheme-swiper {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .scheme__pane .scheme__text {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+    -ms-grid-row: 4;
+    grid-row: 4;
   }
 }
 .scheme__text {
@@ -2177,7 +2229,7 @@
 }
 .scheme-swiper .swiper-button-next {
   position: static;
-  background: url("/template/img/organizers/Icon/arrow_right_white.svg") no-repeat center;
+  background: url("../img/organizers/Icon/arrow_right_white.svg") no-repeat center;
   width: 42px;
   height: 22px;
   background-size: contain;
@@ -2190,7 +2242,7 @@
 }
 .scheme-swiper .swiper-button-prev {
   position: static;
-  background: url("/template/img/organizers/Icon/arrow_right_white.svg") no-repeat center;
+  background: url("../img/organizers/Icon/arrow_right_white.svg") no-repeat center;
   width: 42px;
   height: 22px;
   background-size: contain;
@@ -2259,6 +2311,42 @@
 
 .tabs__pane_show {
   display: block;
+}
+
+.btn-tab-next {
+  padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+@media (max-width: 1023px) {
+  .btn-tab-next {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-column: 4;
+    grid-column: 4;
+  }
+}
+.btn-tab-next img {
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+}
+.btn-tab-next span {
+  color: var(--dark-grey, #555);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
 }
 
 .feedback {
@@ -2575,6 +2663,17 @@
   resize: vertical;
   min-height: 62px;
 }
+.feedback__input textarea::-webkit-scrollbar {
+  width: 4px; /* ширина всей полосы прокрутки */
+}
+.feedback__input textarea::-webkit-scrollbar-track {
+  background: #dddddd; /* цвет зоны отслеживания */
+  border-radius: 20px;
+}
+.feedback__input textarea::-webkit-scrollbar-thumb {
+  background-color: #9b9b9b; /* цвет бегунка */
+  border-radius: 20px; /* округлось бегунка */
+}
 @media (max-width: 1439px) {
   .feedback__input textarea {
     min-height: 56px;
@@ -2636,6 +2735,14 @@
   .feedback__grid-2 .checkbox {
     padding: 0 32px;
   }
+  .feedback__grid-2:first-child .feedback__input:first-child {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .feedback__grid-2:first-child .feedback__input:last-child {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
 }
 .feedback__grid-3 {
   -ms-grid-columns: 212px 212px 1fr;
@@ -2662,8 +2769,9 @@
 }
 @media (max-width: 767px) {
   .feedback__grid-3 {
-    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 24px 1fr;
     grid-template-columns: 1fr 1fr;
+    gap: 24px;
   }
   .feedback__grid-3 .checkbox {
     padding: 0 32px;
@@ -2788,7 +2896,7 @@
   white-space: nowrap;
   cursor: pointer;
   position: relative;
-  padding-left: 48px;
+  padding-left: 48px !important;
 }
 @media (max-width: 767px) {
   .checkbox label {
@@ -2955,7 +3063,7 @@ label {
 
 label.error {
   position: absolute;
-  width: 300px;
+  width: 100%;
   bottom: -30px;
   color: var(--red, #ff433a);
   font-size: 20px;
@@ -3084,6 +3192,18 @@ label.error {
 .sidebar-text-feedback .feedback__form .feedback__item:first-child {
   margin-top: 0;
 }
+.sidebar-text-feedback .feedback__form::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 4px; /* ширина всей полосы прокрутки */
+}
+.sidebar-text-feedback .feedback__form::-webkit-scrollbar-track {
+  background: #dddddd; /* цвет зоны отслеживания */
+  border-radius: 20px;
+}
+.sidebar-text-feedback .feedback__form::-webkit-scrollbar-thumb {
+  background-color: #9b9b9b; /* цвет бегунка */
+  border-radius: 20px; /* округлось бегунка */
+}
 @media (max-width: 1849px) {
   .sidebar-text-feedback .feedback__form .feedback__grid-3 {
     -ms-grid-columns: 1fr 1fr;
@@ -3135,6 +3255,14 @@ label.error {
     padding: 0 32px;
     -ms-grid-column-span: 2;
     grid-column: span 2;
+  }
+  .sidebar-text-feedback .feedback__form .feedback__grid-2:first-child .feedback__input:first-child {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .sidebar-text-feedback .feedback__form .feedback__grid-2:first-child .feedback__input:last-child {
+    -ms-grid-row: 1;
+    grid-row: 1;
   }
 }
 @media (max-width: 1439px) {
@@ -3275,6 +3403,10 @@ label.error {
 .js-sb-content-box {
   padding-top: 50px;
   position: relative;
+}
+
+.feedback__time label.error {
+  padding: 0 18px;
 }
 
 .footer-button {

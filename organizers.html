@@ -187,6 +187,7 @@
     <script src="template/js/jquery.inputmask.min.js"></script>
     <script src="template/js/jquery.validate.min.js"></script>
     <script src="template/js/jq-validate-methods.min.js"></script>
+    <script src="template/js/moment.js"></script>
     <script src="template/js/graph-tabs.min.js"></script>
     <script src="template/js/main.js"></script>
     <script src="template/js/custom.js"></script>
@@ -276,7 +277,7 @@
               <div class="intro-pack">
                 <h2 class="intro-pack__title">Концертный <br> пакгауз</h2>
                 <span class="intro-pack__desc">Концертный зал с профессиональной акустикой подходит для проведения симфонических и камерных концертов, спектаклей, постановок с оперным пением и живыми инструментальными выступлениями разных артистов. Здесь можно проводить конференции, заседания,  а также награждения и прочие торжественные, деловые и образовательные мероприятия.</span>
-                <span class="btn btn-more">Арендовать</span>
+                <a href="#feedback" class="btn btn-more smooth-scroll">Арендовать</a>
               </div>
             </div>
             <div class="intro__type intro__type-exp">
@@ -291,7 +292,7 @@
               <div class="intro-pack">
                 <h2 class="intro-pack__title">выставочный <br> пакгауз</h2>
                 <span class="intro-pack__desc">С экспозиционным залом площадью 643 м2 пробуждает фантазию художников, галеристов и организаторов выставок разного содержания.</span>
-                <span class="btn btn-more">Арендовать</span>
+                <a href="#feedback" class="btn btn-more smooth-scroll">Арендовать</a>
               </div>
             </div>
           </div>
@@ -643,14 +644,14 @@
                       <svg class="scheme__svg" viewBox="0 0 1123 615" xmlns="http://www.w3.org/2000/svg">
                         <path class="tabs__btn tabs__btn_active" d="M323 301V0H841V301H323Z" />
                         <path class="tabs__btn" d="M841 301V0H1123V301H841Z" />
-                        <path class="tabs__btn" d="M126 301V0H323V301H126Z" />
-                        <path class="tabs__btn" d="M0 301V0H126V301H0Z" />
+                        <path class="tabs__btn" d="M0 416V301H1123V416H0Z" />
                         <path class="tabs__btn" d="M0 615V416H126V615H0Z" />
                         <path class="tabs__btn" d="M126.047 416V615H551.455V553.428H467.754V416H126.047Z" fill="trasparent"/>
+                        <path class="tabs__btn" d="M467.5 553.5H551.5V613H655V416H467.5V553.5Z" fill="trasparent"/>
                         <path class="tabs__btn" d="M655 615V416H977V615H655Z" />
                         <path class="tabs__btn" d="M977 615V416H1123V615H977Z" />
-                        <path class="tabs__btn" d="M0 416V301H1123V416H0Z" />
-                        <path class="tabs__btn" d="M467.5 553.5H551.5V613H655V416H467.5V553.5Z" fill="trasparent"/>
+                        <path class="tabs__btn" d="M0 301V0H126V301H0Z" />
+                        <path class="tabs__btn" d="M126 301V0H323V301H126Z" />
                       </svg>    
                     </div>
                   </div>
@@ -659,6 +660,10 @@
                       <div class="tabs__pane tabs__pane_show">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Сцена</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -706,6 +711,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Конgerqwgqrцертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Вестибюль</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -753,6 +762,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Гардероб</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -800,6 +813,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Буфет</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -847,6 +864,11 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Гостевые 
+                              с/у</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -894,6 +916,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Гримерные комнаты + с/у</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -941,6 +967,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Тех помещения</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -988,6 +1018,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Тех помещения</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -1035,6 +1069,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Фойе</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -1082,6 +1120,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Концертный зал</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -1136,10 +1178,10 @@
                     <div class="scheme__body scheme__padd">
                       <img src="template/img/organizers/scheme-exp.jpg" alt="" class="scheme__img">
                       <svg class="scheme__svg" width="1123" height="620" viewBox="0 0 1123 620" xmlns="http://www.w3.org/2000/svg">
+                        <path class="tabs__btn tabs__btn_active" d="M1122.5 308H200V18H1122.5V308Z" />
                         <path class="tabs__btn" d="M28 308H233.5H1122.5V423H28V308Z" />
                         <path class="tabs__btn" d="M287 516V423H474V516H287Z" />
                         <path class="tabs__btn" d="M574 454V619H699.5V454H574Z" />
-                        <path class="tabs__btn tabs__btn_active" d="M1122.5 308H200V18H1122.5V308Z" />
                         <path class="tabs__btn" d="M1042 619.5H699V423H1042V619.5Z" />
                         <path class="tabs__btn" d="M1122.5 423H1042V619.5H1122.5V423Z" />
                       </svg>   
@@ -1150,6 +1192,10 @@
                       <div class="tabs__pane tabs__pane_show">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Вестибюль</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -1197,6 +1243,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Конgerqwgqrцертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Переговорная</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -1244,6 +1294,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>с/у</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -1291,6 +1345,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Буфет</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -1338,6 +1396,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Гардероб</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -1385,194 +1447,10 @@
                       <div class="tabs__pane">
                         <div class="scheme__pane">
                           <h3 class="intro-pack__title">Концертный зал</h3>
-                          <div class="scheme-swiper swiper">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="scheme-swiper__nav">
-                              <div class="swiper-button-prev"></div>
-                              <div class="swiper-button-next"></div>
-                            </div>
-                          </div>
-                          <div class="scheme__text">
-                            <div class="scheme__stat">
-                              <span>ОБЩАЯ ПЛОЩАДЬ</span>
-                              <span>486,78 м2</span>
-                            </div>
-                            <div class="scheme__stat">
-                              <span>ВЫСОТА ПОТОЛКОВ</span>
-                              <span>8,45 м</span>
-                            </div>
-                            <div class="scheme__stat">
-                              <span>ПАНОРАМНОЕ ОСТЕКЛЕНИЕ</span>
-                              <span>5,3 х 11,0 м</span>
-                            </div>
-                            <div class="scheme__desc">
-                              <p><b>Главная особенность концертного зала</b> — большое панорамное остекление за сценой, которое делает нижегородские панорамы гармоничным фоном для любого выступления. При необходимости остекление можно закрыть и создать другой фон.</p>
-                              <p><b>Таких театров в России больше нет!</b></p>
-                              <p><b>Главная особенность концертного зала</b> — большое панорамное остекление за сценой, которое делает нижегородские панорамы гармоничным фоном для любого выступления. При необходимости остекление можно закрыть и создать другой фон.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs__pane">
-                        <div class="scheme__pane">
-                          <h3 class="intro-pack__title">Концертный зал</h3>
-                          <div class="scheme-swiper swiper">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="scheme-swiper__nav">
-                              <div class="swiper-button-prev"></div>
-                              <div class="swiper-button-next"></div>
-                            </div>
-                          </div>
-                          <div class="scheme__text">
-                            <div class="scheme__stat">
-                              <span>ОБЩАЯ ПЛОЩАДЬ</span>
-                              <span>486,78 м2</span>
-                            </div>
-                            <div class="scheme__stat">
-                              <span>ВЫСОТА ПОТОЛКОВ</span>
-                              <span>8,45 м</span>
-                            </div>
-                            <div class="scheme__stat">
-                              <span>ПАНОРАМНОЕ ОСТЕКЛЕНИЕ</span>
-                              <span>5,3 х 11,0 м</span>
-                            </div>
-                            <div class="scheme__desc">
-                              <p><b>Главная особенность концертного зала</b> — большое панорамное остекление за сценой, которое делает нижегородские панорамы гармоничным фоном для любого выступления. При необходимости остекление можно закрыть и создать другой фон.</p>
-                              <p><b>Таких театров в России больше нет!</b></p>
-                              <p><b>Главная особенность концертного зала</b> — большое панорамное остекление за сценой, которое делает нижегородские панорамы гармоничным фоном для любого выступления. При необходимости остекление можно закрыть и создать другой фон.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs__pane">
-                        <div class="scheme__pane">
-                          <h3 class="intro-pack__title">Концертный зал</h3>
-                          <div class="scheme-swiper swiper">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="scheme-swiper__nav">
-                              <div class="swiper-button-prev"></div>
-                              <div class="swiper-button-next"></div>
-                            </div>
-                          </div>
-                          <div class="scheme__text">
-                            <div class="scheme__stat">
-                              <span>ОБЩАЯ ПЛОЩАДЬ</span>
-                              <span>486,78 м2</span>
-                            </div>
-                            <div class="scheme__stat">
-                              <span>ВЫСОТА ПОТОЛКОВ</span>
-                              <span>8,45 м</span>
-                            </div>
-                            <div class="scheme__stat">
-                              <span>ПАНОРАМНОЕ ОСТЕКЛЕНИЕ</span>
-                              <span>5,3 х 11,0 м</span>
-                            </div>
-                            <div class="scheme__desc">
-                              <p><b>Главная особенность концертного зала</b> — большое панорамное остекление за сценой, которое делает нижегородские панорамы гармоничным фоном для любого выступления. При необходимости остекление можно закрыть и создать другой фон.</p>
-                              <p><b>Таких театров в России больше нет!</b></p>
-                              <p><b>Главная особенность концертного зала</b> — большое панорамное остекление за сценой, которое делает нижегородские панорамы гармоничным фоном для любого выступления. При необходимости остекление можно закрыть и создать другой фон.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs__pane">
-                        <div class="scheme__pane">
-                          <h3 class="intro-pack__title">Концертный зал</h3>
-                          <div class="scheme-swiper swiper">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="scheme-swiper__slide">
-                                  <img src="template/img/organizers/scheme_slide.jpg" alt="">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="scheme-swiper__nav">
-                              <div class="swiper-button-prev"></div>
-                              <div class="swiper-button-next"></div>
-                            </div>
-                          </div>
-                          <div class="scheme__text">
-                            <div class="scheme__stat">
-                              <span>ОБЩАЯ ПЛОЩАДЬ</span>
-                              <span>486,78 м2</span>
-                            </div>
-                            <div class="scheme__stat">
-                              <span>ВЫСОТА ПОТОЛКОВ</span>
-                              <span>8,45 м</span>
-                            </div>
-                            <div class="scheme__stat">
-                              <span>ПАНОРАМНОЕ ОСТЕКЛЕНИЕ</span>
-                              <span>5,3 х 11,0 м</span>
-                            </div>
-                            <div class="scheme__desc">
-                              <p><b>Главная особенность концертного зала</b> — большое панорамное остекление за сценой, которое делает нижегородские панорамы гармоничным фоном для любого выступления. При необходимости остекление можно закрыть и создать другой фон.</p>
-                              <p><b>Таких театров в России больше нет!</b></p>
-                              <p><b>Главная особенность концертного зала</b> — большое панорамное остекление за сценой, которое делает нижегородские панорамы гармоничным фоном для любого выступления. При необходимости остекление можно закрыть и создать другой фон.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs__pane">
-                        <div class="scheme__pane">
-                          <h3 class="intro-pack__title">Концертный зал</h3>
+                          <button class="btn-tab-next">
+                            <span>Выставочный зал</span>
+                            <img src="template/img/organizers/Icon/arrow_right.svg" alt="">
+                          </button>
                           <div class="scheme-swiper swiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -1691,7 +1569,7 @@
           </div>
         </div>
       </section>
-      <section class="feedback">
+      <section class="feedback" id="feedback">
         <div class="screen">
           <h2 class="feedback__title title-h2">Оставьте заявку</h2>
           <div class="feedback__form">
@@ -1751,21 +1629,27 @@
                       </label>
                     </div>
                   </div>
+                  <div class="feedback__input feedback__mtop" id="another-event" style="display: none;">
+                    <span class="feedback__name title-desc">Другой формат мероприятия</span>
+                    <label for="feedback_another">
+                      <input type="text" id="feedback_another" name="feedback_another">
+                    </label>
+                  </div>
                   <div class="feedback__mtop">
                     <span class="feedback__name title-desc">Примерное количество участников</span>
                     <div class="feedback__grid feedback__grid-2">
                       <div class="feedback__input">
-                        <label for="feedback_tel">
-                          <input type="number" id="feedback_tel" name="feedback_tel">
+                        <label for="feedback_parts">
+                          <input type="number" id="feedback_parts" name="feedback_parts">
                         </label>
                       </div>
                       <div class="checkbox">
-                        <input type="checkbox" id="honor_guests" class="checkbox-input">
+                        <input type="checkbox" id="honor_guests" class="checkbox-input honor-guests">
                         <label for="honor_guests" class="checkbox-label title-desc">Будут почетные гости </label>
                       </div>
                     </div>
                   </div>
-                  <div class="feedback__input feedback__mtop">
+                  <div class="feedback__input feedback__mtop guests" style="display: none;">
                     <span class="feedback__name title-desc">Внесите в поле ниже данные всех почетных гостей (ФИО) </span>
                     <label for="feedback_guests">
                       <textarea id="feedback_guests" name="feedback_guests"></textarea>
@@ -1774,14 +1658,14 @@
                   <div class="feedback__mtop">
                     <span class="feedback__name title-desc">Сроки мероприятия</span>
                     <div class="feedback__grid feedback__grid-3">
-                      <div class="feedback__input">
+                      <div class="feedback__input feedback__time">
                         <label for="feedback_date">
-                          <input type="text" id="feedback_date" name="feedback_date" placeholder="Дата: __ / __ / ____">
+                          <input type="text" id="feedback_date" name="feedback_date" placeholder="Дата: __/__/____">
                         </label>
                       </div>
-                      <div class="feedback__input">
+                      <div class="feedback__input feedback__time">
                         <label for="feedback_time">
-                          <input type="text" id="feedback_time" name="feedback_time" placeholder="Время: __ : __">
+                          <input type="text" id="feedback_time" name="feedback_time" placeholder="Время: __:__">
                         </label>
                       </div>
                       <div class="checkbox">
@@ -2025,21 +1909,27 @@
                             </label>
                           </div>
                         </div>
+                        <div class="feedback__input feedback__mtop" id="another-event_1" style="display: none;">
+                          <span class="feedback__name title-desc">Другой формат мероприятия</span>
+                          <label for="feedback_another_1">
+                            <input type="text" id="feedback_another_1" name="feedback_another_1">
+                          </label>
+                        </div>
                         <div class="feedback__mtop">
                           <span class="feedback__name title-desc">Примерное количество участников</span>
                           <div class="feedback__grid feedback__grid-2">
                             <div class="feedback__input">
-                              <label for="feedback_tel_1">
-                                <input type="number" id="feedback_tel_1" name="feedback_tel_1">
+                              <label for="feedback_parts-1">
+                                <input type="number" id="feedback_parts_1" name="feedback_parts_1">
                               </label>
                             </div>
                             <div class="checkbox">
-                              <input type="checkbox" id="honor_guests_1" class="checkbox-input">
+                              <input type="checkbox" id="honor_guests_1" class="checkbox-input honor-guests">
                               <label for="honor_guests_1" class="checkbox-label title-desc">Будут почетные гости </label>
                             </div>
                           </div>
                         </div>
-                        <div class="feedback__input feedback__mtop">
+                        <div class="feedback__input feedback__mtop guests" style="display: none;">
                           <span class="feedback__name title-desc">Внесите в поле ниже данные всех почетных гостей (ФИО) </span>
                           <label for="feedback_guests_1">
                             <textarea id="feedback_guests_1" name="feedback_guests_1"></textarea>
@@ -2048,14 +1938,14 @@
                         <div class="feedback__mtop">
                           <span class="feedback__name title-desc">Сроки мероприятия</span>
                           <div class="feedback__grid feedback__grid-3">
-                            <div class="feedback__input">
+                            <div class="feedback__input feedback__time">
                               <label for="feedback_date_1">
-                                <input type="text" id="feedback_date_1" name="feedback_date_1" placeholder="Дата: __ / __ / ____">
+                                <input type="text" id="feedback_date_1" name="feedback_date_1" placeholder="Дата: __/__/____">
                               </label>
                             </div>
-                            <div class="feedback__input">
+                            <div class="feedback__input feedback__time">
                               <label for="feedback_time_1">
-                                <input type="text" id="feedback_time_1" name="feedback_time_1" placeholder="Время: __ : __">
+                                <input type="text" id="feedback_time_1" name="feedback_time_1" placeholder="Время: __:__">
                               </label>
                             </div>
                             <div class="checkbox">

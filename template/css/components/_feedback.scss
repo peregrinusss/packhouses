@@ -242,6 +242,20 @@
       // height: 62px;
       min-height: 62px;
 
+      &::-webkit-scrollbar {
+        width: 4px; /* ширина всей полосы прокрутки */
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #dddddd; /* цвет зоны отслеживания */
+        border-radius: 20px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #9b9b9b; /* цвет бегунка */
+        border-radius: 20px; /* округлось бегунка */
+      }
+
       @include width-1440 {
         // height: 56px;
         min-height: 56px;
@@ -299,6 +313,19 @@
       & .checkbox {
         padding: 0 32px;
       }
+
+      &:first-child {
+
+        & .feedback__input {
+
+          &:first-child {
+            grid-row: 2;
+          }
+          &:last-child {
+            grid-row: 1;
+          }
+        }
+      }
     }
   }
 
@@ -326,6 +353,7 @@
 
     @include width-768 {
       grid-template-columns: 1fr 1fr;
+      gap: 24px;
 
       & .checkbox {
         padding: 0 32px;
@@ -441,7 +469,7 @@
     white-space: nowrap;
     cursor: pointer;
     position: relative;
-    padding-left: 48px;
+    padding-left: 48px !important;
 
     @include width-768 {
       white-space: normal;
@@ -585,7 +613,7 @@ label {
 
 label.error {
   position: absolute;
-  width: 300px;
+  width: 100%;
   bottom: -30px;
   color: var(--red, #ff433a);
   font-size: 20px;
@@ -704,20 +732,20 @@ label.error {
       }
     }
 
-    // &::-webkit-scrollbar {
-    //   -webkit-appearance: none;
-    //   width: 4px; /* ширина всей полосы прокрутки */
-    // }
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 4px; /* ширина всей полосы прокрутки */
+    }
 
-    // &::-webkit-scrollbar-track {
-    //   background: #dddddd; /* цвет зоны отслеживания */
-    //   border-radius: 20px;
-    // }
+    &::-webkit-scrollbar-track {
+      background: #dddddd; /* цвет зоны отслеживания */
+      border-radius: 20px;
+    }
 
-    // &::-webkit-scrollbar-thumb {
-    //   background-color: #9b9b9b; /* цвет бегунка */
-    //   border-radius: 20px; /* округлось бегунка */
-    // }
+    &::-webkit-scrollbar-thumb {
+      background-color: #9b9b9b; /* цвет бегунка */
+      border-radius: 20px; /* округлось бегунка */
+    }
 
     & .feedback__grid-3 {
 
@@ -767,6 +795,17 @@ label.error {
         & .checkbox {
           padding: 0 32px;
           grid-column: span 2;
+        }
+
+        &:first-child {
+          & .feedback__input {
+            &:first-child {
+              grid-row: 2;
+            }
+            &:last-child {
+              grid-row: 1;
+            }
+          }
         }
       }
 
@@ -907,4 +946,10 @@ label.error {
 .js-sb-content-box {
   padding-top: 50px;
   position: relative;
+}
+
+.feedback__time {
+  & label.error {
+    padding: 0 18px;
+  }
 }

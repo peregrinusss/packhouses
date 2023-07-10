@@ -169,12 +169,114 @@ $(document).ready(function () {
 	$('.scheme__wrap').scrollLeft(100);
 
 	$('#feedback_tel').inputmask("+7 (999)-999-99-99");
-	$('#feedback_date').inputmask("Дата: 99 / 99 / 9999");
-	$('#feedback_time').inputmask("Время: 99 : 99");
+	$('#feedback_date').inputmask("Дата: 99/99/9999");
+	$('#feedback_time').inputmask("Время: 99:99");
 
 	$('#feedback_tel_1').inputmask("+7 (999)-999-99-99");
-	$('#feedback_date_1').inputmask("Дата: 99 / 99 / 9999");
-	$('#feedback_time_1').inputmask("Время: 99 : 99");
+	$('#feedback_date_1').inputmask("Дата: 99/99/9999");
+	$('#feedback_time_1').inputmask("Время: 99:99");
+
+
+	$('#feedback_date').on('change', function() {
+		var inputDate = $(this).val();
+		var trimmedString = inputDate.substring(6);
+		var isValidDate = moment(trimmedString, "DD/MM/YYYY", true).isValid();
+	
+		if (!isValidDate) {
+			// Очистка поля ввода или выполнение других действий при недопустимой дате
+			$(this).val('');
+			// Создание элемента <label>
+			var errorLabel = $('<label>', {
+				id: 'feedback_date-error',
+				class: 'error',
+				for: 'feedback_date',
+				text: '! Неверная дата'
+			});
+
+			// Вставка элемента после #feedback_date
+			$('#feedback_date').after(errorLabel);
+		}
+	});
+
+	$('#feedback_time').on('change', function() {
+		var inputTime = $(this).val();
+		var trimmedString = inputTime.substring(7);
+		var format = "HH:mm";
+		var isValidTime = moment(trimmedString, format, true).isValid();
+	
+		if (!isValidTime) {
+			$(this).val('');
+			// Создание элемента <label> с сообщением об ошибке
+			var errorLabel = $('<label>', {
+				id: 'feedback_time-error',
+				class: 'error',
+				for: 'feedback_time',
+				text: '! Неверное время'
+			});
+	
+			// Вставка элемента после #feedback_time, если его еще нет
+			$(this).after(errorLabel);
+		}
+	});
+
+	$('#feedback_date_1').on('change', function() {
+		var inputDate = $(this).val();
+		var trimmedString = inputDate.substring(6);
+		console.log(trimmedString)
+		var isValidDate = moment(trimmedString, "DD/MM/YYYY", true).isValid();
+
+		console.log(isValidDate)
+	
+		if (!isValidDate) {
+			// Очистка поля ввода или выполнение других действий при недопустимой дате
+			$(this).val('');
+			// Создание элемента <label>
+			var errorLabel = $('<label>', {
+				id: 'feedback_date-error',
+				class: 'error',
+				for: 'feedback_date',
+				text: '! Неверная дата'
+			});
+
+			// Вставка элемента после #feedback_date
+			$(this).after(errorLabel);
+		}
+	});
+
+	$('#feedback_time_1').on('change', function() {
+		var inputTime = $(this).val();
+		var trimmedString = inputTime.substring(7);
+
+		var format = "HH:mm";
+
+		var isValidTime = moment(trimmedString, format, true).isValid();
+		// var isValidTime = moment().add(trimmedString, 'days').calendar();;
+		console.log(isValidTime)
+	
+		if (!isValidTime) {
+			$(this).val('');
+			// Создание элемента <label> с сообщением об ошибке
+			var errorLabel = $('<label>', {
+				id: 'feedback_time-error_1',
+				class: 'error',
+				for: 'feedback_time_1',
+				text: '! Неверное время'
+			});
+	
+			// Вставка элемента после #feedback_time, если его еще нет
+			$(this).after(errorLabel);
+		}
+	});
+	
+	
+	function parseDMY(value) {
+		var date = value.split("/");
+		var d = parseInt(date[0], 10),
+			m = parseInt(date[1], 10),
+			y = parseInt(date[2], 10);
+		return new Date(y, m - 1, d);
+	}
+
 
 
 	// Input file
@@ -233,6 +335,7 @@ $(document).ready(function () {
 
 
 	$("#feedback_form").validate({
+		ignore: ":hidden",
 		errorPlacement: function(error, element) {
       if (element.attr("name") == "feedback_agree") {
         error.insertBefore(element);
@@ -285,6 +388,7 @@ $(document).ready(function () {
 
 
 	$("#feedback_form_1").validate({
+		ignore: ":hidden",
 		errorPlacement: function(error, element) {
       if (element.attr("name") == "feedback_agree_1") {
         error.insertBefore(element);
@@ -333,4 +437,97 @@ $(document).ready(function () {
 			}
 		}
   });
+
+
+	$('.btn-tab-next').click(function() {
+		const tabContainer = $(this).closest('.tabs__panel');
+		const tabsPanes = tabContainer.find('.tabs__content .tabs__pane');
+		const currentPane = tabContainer.find('.tabs__content .tabs__pane.tabs__pane_show');
+	
+		const currentIndex = tabsPanes.index(currentPane);
+		const nextIndex = (currentIndex === tabsPanes.length - 1) ? 0 : currentIndex + 1;
+	
+		currentPane.removeClass('tabs__pane_show');
+		tabsPanes.eq(nextIndex).addClass('tabs__pane_show');
+	
+		const tabsBtns = tabContainer.find('.scheme__svg .tabs__btn');
+		const currentBtn = tabContainer.find('.scheme__svg .tabs__btn.tabs__btn_active');
+	
+		const currentBtnIndex = tabsBtns.index(currentBtn);
+		const nextBtnIndex = (currentBtnIndex === tabsBtns.length - 1) ? 0 : currentBtnIndex + 1;
+	
+		currentBtn.removeClass('tabs__btn_active');
+		tabsBtns.eq(nextBtnIndex).addClass('tabs__btn_active');
+	
+		return false; // Добавлено, чтобы предотвратить перезагрузку страницы при клике на кнопку
+	});
+
+	
+	$('#feedback_form_1 .select-options li').click(function() {
+		var selectedValue = $(this).text();
+		console.log(selectedValue)
+		
+		if (selectedValue === 'Другое (напишите)') {
+			$('#another-event_1').slideDown(); // Плавно показываем блок
+			console.log(1)
+		} else {
+			$('#another-event_1').slideUp(); // Плавно скрываем блок
+		}
+	});
+
+	$('#feedback_form .select-options li').click(function() {
+		var selectedValue = $(this).text();
+		console.log(selectedValue)
+		
+		if (selectedValue === 'Другое (напишите)') {
+			$('#another-event').slideDown(); // Плавно показываем блок
+			console.log(1)
+		} else {
+			$('#another-event').slideUp(); // Плавно скрываем блок
+		}
+	});
+
+
+	// Скролл к якорям
+	const smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
+
+	// Обходим все ссылки и добавляем обработчик события клика
+	smoothScrollLinks.forEach(link => {
+		link.addEventListener('click', smoothScroll);
+	});
+
+	// Функция для плавного скролла
+	function smoothScroll(event) {
+		event.preventDefault(); // Отменяем стандартное действие ссылки
+
+		const targetId = this.getAttribute('href'); // Получаем идентификатор якоря
+		const targetElement = document.querySelector(targetId); // Находим соответствующий элемент
+
+		if (targetElement) {
+			// Выполняем плавную прокрутку к элементу
+			targetElement.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+		}
+	}
+
+
+	$('#feedback_form .honor-guests').change(function() {
+		if ($(this).is(':checked')) {
+			$('.guests').slideDown();
+		} else {
+			$('.guests').slideUp();
+		}
+	});
+
+	$('#feedback_form_1 .honor-guests').change(function() {
+		if ($(this).is(':checked')) {
+			$('.guests').slideDown();
+		} else {
+			$('.guests').slideUp();
+		}
+	});
+
+	
 })
