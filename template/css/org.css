@@ -3012,7 +3012,7 @@ input[type=number] {
   transition: all 0.4s;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: flex !important;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
