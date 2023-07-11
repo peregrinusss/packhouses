@@ -350,7 +350,7 @@ $(document).ready(function () {
 			feedback_tel: "required",
 			feedback_title: "required",
 			feedback_file: {
-				extension: "png|jpeg|jpg|pdf|doc|txt",
+				extension: "png|jpeg|jpg|pdf|doc|docx|txt",
 			},
 			feedback_agree: "required",
 			feedback_prog: {
@@ -407,7 +407,7 @@ $(document).ready(function () {
 			feedback_email_1: "required",
 			feedback_tel_1: "required",
 			feedback_file_1: {
-				extension: "png|jpeg|jpg|pdf|doc|txt",
+				extension: "png|jpeg|jpg|pdf|doc|docx|txt",
 			},
 			feedback_title_1: "required",
 			feedback_agree_1: "required",
