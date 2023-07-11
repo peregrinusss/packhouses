@@ -957,3 +957,70 @@ label.error {
     padding: 0 18px;
   }
 }
+
+.feedback__file-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 7px;
+
+  & .feedback__name {
+    margin-bottom: 0;
+  }
+}
+
+.feedback__file-available {
+  display: block;
+  font-size: 18px;
+  line-height: 150%;
+  color: #9B9B9B;
+  padding-right: 32px;
+
+  @include width-1700 {
+    font-size: 16px;
+  }
+
+  @include width-768 {
+    font-size: 14px;
+  }
+
+  &--desc {
+
+    @include width-768 {
+      display: none;
+    }
+  }
+
+  &--mob {
+    display: none;
+    padding-left: 32px;
+    margin-bottom: 4px;
+
+    @include width-768 {
+      display: block;
+    }
+  }
+}
+
+.sidebar {
+
+  & .feedback__file-available {
+  
+    &--desc {
+  
+      @include width-1440 {
+        display: none;
+      }
+    }
+  
+    &--mob {
+      display: none;
+      padding-left: 32px;
+      margin-bottom: 4px;
+  
+      @include width-1440 {
+        display: block;
+      }
+    }
+  }
+}

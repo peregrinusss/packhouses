@@ -349,6 +349,9 @@ $(document).ready(function () {
 			feedback_email: "required",
 			feedback_tel: "required",
 			feedback_title: "required",
+			feedback_file: {
+				extension: "png|jpeg|jpg|pdf|doc|txt",
+			},
 			feedback_agree: "required",
 			feedback_prog: {
 				require_from_group: [1, '.input-group'],
@@ -365,11 +368,13 @@ $(document).ready(function () {
     },
     submitHandler: function(form) {
       form.reset()
+			form.querySelector('.input__file-button-text').innerText = "Прикрепить файл"
     },
 		messages: {
 			feedback_name: "! Вы не заполнили это поле",
 			feedback_comp: "! Вы не заполнили это поле",
 			feedback_tel: "! Вы не заполнили это поле",
+			feedback_file: "! Неверный формат",
 			feedback_title: "! Вы не заполнили это поле",
 			feedback_prog: {
 				require_from_group: "! Заполните одно из полей"
@@ -401,6 +406,9 @@ $(document).ready(function () {
 			feedback_comp_1: "required",
 			feedback_email_1: "required",
 			feedback_tel_1: "required",
+			feedback_file_1: {
+				extension: "png|jpeg|jpg|pdf|doc|txt",
+			},
 			feedback_title_1: "required",
 			feedback_agree_1: "required",
 			feedback_prog_1: {
@@ -418,11 +426,13 @@ $(document).ready(function () {
     },
     submitHandler: function(form) {
       form.reset()
+			form.querySelector('.input__file-button-text').innerText = "Прикрепить файл"
     },
 		messages: {
 			feedback_name_1: "! Вы не заполнили это поле",
 			feedback_comp_1: "! Вы не заполнили это поле",
 			feedback_tel_1: "! Вы не заполнили это поле",
+			feedback_file_1: "! Неверный формат",
 			feedback_title_1: "! Вы не заполнили это поле",
 			feedback_prog_1: {
 				require_from_group: "! Заполните одно из полей"
