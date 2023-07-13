@@ -1160,6 +1160,8 @@ input[type=number] {
 .docs__items ol {
   list-style: none;
   counter-reset: item;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
 }
 .docs__items ol li::before {
   counter-increment: item;
@@ -1190,7 +1192,8 @@ input[type=number] {
   }
 }
 .docs__item {
-  border-top: 2px solid #DDD;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
   padding: 32px 40px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1211,6 +1214,13 @@ input[type=number] {
 }
 .docs__item:hover {
   background: rgba(221, 221, 221, 0.2);
+}
+.docs__item:nth-child(n+5) {
+  display: none;
+}
+.docs__item.is-visible {
+  display: -ms-grid;
+  display: grid;
 }
 .docs__item-3 .docs__app {
   opacity: 0;
@@ -1246,14 +1256,14 @@ input[type=number] {
 @media (max-width: 767px) {
   .docs__item {
     padding: 14px 28px;
-    -ms-grid-columns: auto 10px auto;
+    -ms-grid-columns: auto 16px auto;
     grid-template-columns: auto auto;
     -ms-grid-rows: auto 0 auto 0 auto;
     grid-template-rows: repeat(3, auto);
     gap: 0;
-    -webkit-column-gap: 10px;
-       -moz-column-gap: 10px;
-            column-gap: 10px;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
   }
   .docs__item > *:nth-child(1) {
     -ms-grid-row: 1;
@@ -1323,7 +1333,7 @@ input[type=number] {
     grid-column: 1;
     -ms-grid-row: 2;
     grid-row: 2;
-    margin-top: 4px;
+    margin-top: 0;
   }
 }
 .docs__title {

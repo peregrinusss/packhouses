@@ -2,9 +2,8 @@ $(document).ready(function () {
 	var quoteSwiper1 = new Swiper(".quote-slider-first", {
 		direction: "vertical",
 		effect: "slide",
-		//autoHeight: true,
 		loop: false,
-		allowTouchMove: true,
+		allowTouchMove: false,
 	});
 
 	var $Speed = 1000;
@@ -47,9 +46,8 @@ $(document).ready(function () {
   var quoteSwiper2 = new Swiper(".quote-slider-second", {
 		direction: "vertical",
 		effect: "slide",
-		//autoHeight: true,
 		loop: false,
-		allowTouchMove: true,
+		allowTouchMove: false,
 	});
 	
 	var $Speed = 1000;
@@ -539,5 +537,24 @@ $(document).ready(function () {
 		}
 	});
 
+
+	// Show all btn
+	const showMore = document.querySelector('.show-more');
+
+	if (showMore) {
+		const productsLength = document.querySelectorAll('.docs__item').length;
+		let items = 4;
 	
+		showMore.addEventListener('click', () => {
+			items = 9;
+			const array = Array.from(document.querySelector('.docs__items ol').children);
+			const visItems = array.slice(0, items)
+
+			visItems.forEach(el => el.classList.add('is-visible'));
+
+			if (visItems.length === productsLength) {
+				showMore.style.display = 'none';
+			}
+		})
+	}
 })
