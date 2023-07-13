@@ -2384,9 +2384,6 @@ input[type=number] {
     padding: 60px 28px;
   }
 }
-.feedback label {
-  display: block;
-}
 .feedback__mtop {
   margin-top: 40px;
 }
@@ -2405,6 +2402,9 @@ input[type=number] {
 }
 .feedback .intro-pack__title {
   text-align: center;
+}
+.feedback__form label {
+  display: block;
 }
 .feedback__form .form-select {
   width: 100%;
